@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro Jovem - Conecta Futuro</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <h1>
+            Conecta Futuro
+        </h1>
+
+        <p>
+            Comece sua jornada profissional
+        </p>
+
+    </header>
+
+
+    <div class="form-container">
+
+        <h1>
+            Cadastro do Jovem
+        </h1>
+
+        <p>
+            Preencha seus dados para começar.
+        </p>
+
+
+        <form id="formJovem">
+
+            <input type="text" id="nome" placeholder="Nome Completo" required>
+
+
+            <input type="email" id="email" placeholder="E-mail" required>
+
+
+            <input type="tel" id="telefone" placeholder="Telefone">
+
+
+            <select id="escolaridade" required>
+
+                <option value="">
+                    Escolaridade
+                </option>
+
+                <option value="Ensino Médio">
+                    Ensino Médio
+                </option>
+
+                <option value="Técnico">
+                    Técnico
+                </option>
+
+                <option value="Superior">
+                    Superior
+                </option>
+
+            </select>
+
+
+            <textarea id="sobre" placeholder="Fale sobre você"></textarea>
+
+
+            <button type="submit">
+                Cadastrar e ver cursos
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <script>
+
+        document
+            .getElementById("formJovem")
+            .addEventListener("submit", function (event) {
+
+                // Impede o formulário de recarregar a página
+                event.preventDefault();
+
+
+                // Pega os dados preenchidos
+
+                const nome =
+                    document.getElementById("nome").value;
+
+                const email =
+                    document.getElementById("email").value;
+
+                const telefone =
+                    document.getElementById("telefone").value;
+
+                const escolaridade =
+                    document.getElementById("escolaridade").value;
+
+                const sobre =
+                    document.getElementById("sobre").value;
+
+
+                // Cria o perfil do jovem
+
+                const jovem = {
+
+                    nome: nome,
+
+                    email: email,
+
+                    telefone: telefone,
+
+                    escolaridade: escolaridade,
+
+                    sobre: sobre,
+
+                    pontos: 0,
+
+                    nivel: 1
+
+                };
+
+
+                // Salva o jovem no navegador
+
+                localStorage.setItem(
+                    "jovem",
+                    JSON.stringify(jovem)
+                );
+
+
+                // Redireciona para cursos.html
+
+                window.location.href = "cursos.html";
+
+            });
+
+    </script>
+
+
+</body>
+
+</html>

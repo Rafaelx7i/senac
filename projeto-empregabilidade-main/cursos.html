@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Cursos - Conecta Futuro
+    </title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <h1>
+            Conecta Futuro
+        </h1>
+
+        <p>
+            Área de capacitação
+        </p>
+
+
+        <nav>
+
+            <a href="perfil.html">
+                Meu Perfil
+            </a>
+
+            <a href="cursos.html">
+                Cursos
+            </a>
+
+            <a href="notificacoes.html">
+                Notificações
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main class="dashboard">
+
+
+        <section class="nivel-card">
+
+            <h2>
+                Nível 1 - Iniciante
+            </h2>
+
+            <p>
+                <strong id="pontosAtual">
+                    0 pontos
+                </strong>
+            </p>
+
+            <div class="barra">
+
+                <div class="progresso" id="barraNivel" style="width: 0%;">
+                </div>
+
+            </div>
+
+            <p id="textoNivel">
+                0 / 100 pontos para o próximo nível
+            </p>
+
+        </section>
+
+
+        <h2>
+            Cursos Recomendados
+        </h2>
+
+
+        <div class="curso-grid">
+
+
+            <!-- CURSO 1 -->
+
+            <div class="card curso">
+
+                <i class="fa-solid fa-code icon"></i>
+
+                <h3>
+                    Programação Web
+                </h3>
+
+                <p>
+                    Aprenda HTML, CSS e JavaScript
+                    e desenvolva seus primeiros projetos.
+                </p>
+
+                <p>
+                    <strong>
+                        100 XP
+                    </strong>
+                </p>
+
+                <button onclick="concluirCurso('Programação Web', 100)">
+
+                    Começar curso
+
+                </button>
+
+            </div>
+
+
+            <!-- CURSO 2 -->
+
+            <div class="card curso">
+
+                <i class="fa-solid fa-bullhorn icon"></i>
+
+                <h3>
+                    Marketing Digital
+                </h3>
+
+                <p>
+                    Aprenda estratégias digitais
+                    para redes sociais e negócios.
+                </p>
+
+                <p>
+                    <strong>
+                        100 XP
+                    </strong>
+                </p>
+
+                <button onclick="concluirCurso('Marketing Digital', 100)">
+
+                    Começar curso
+
+                </button>
+
+            </div>
+
+
+            <!-- CURSO 3 -->
+
+            <div class="card curso">
+
+                <i class="fa-solid fa-comments icon"></i>
+
+                <h3>
+                    Comunicação Profissional
+                </h3>
+
+                <p>
+                    Desenvolva comunicação,
+                    liderança e trabalho em equipe.
+                </p>
+
+                <p>
+                    <strong>
+                        50 XP
+                    </strong>
+                </p>
+
+                <button onclick="concluirCurso('Comunicação Profissional', 50)">
+
+                    Começar curso
+
+                </button>
+
+            </div>
+
+
+            <!-- CURSO 4 -->
+
+            <div class="card curso">
+
+                <i class="fa-solid fa-file-excel icon"></i>
+
+                <h3>
+                    Excel Básico
+                </h3>
+
+                <p>
+                    Aprenda planilhas, fórmulas
+                    e ferramentas do Excel.
+                </p>
+
+                <p>
+                    <strong>
+                        80 XP
+                    </strong>
+                </p>
+
+                <button onclick="concluirCurso('Excel Básico', 80)">
+
+                    Começar curso
+
+                </button>
+
+            </div>
+
+
+            <!-- CURSO 5 -->
+
+            <div class="card curso">
+
+                <i class="fa-solid fa-palette icon"></i>
+
+                <h3>
+                    Design Gráfico
+                </h3>
+
+                <p>
+                    Aprenda conceitos básicos
+                    de design e criação visual.
+                </p>
+
+                <p>
+                    <strong>
+                        120 XP
+                    </strong>
+                </p>
+
+                <button onclick="concluirCurso('Design Gráfico', 120)">
+
+                    Começar curso
+
+                </button>
+
+            </div>
+
+
+            <!-- CURSO 6 -->
+
+            <div class="card curso">
+
+                <i class="fa-solid fa-mobile-screen icon"></i>
+
+                <h3>
+                    Redes Sociais
+                </h3>
+
+                <p>
+                    Aprenda estratégias para criar
+                    conteúdo para redes sociais.
+                </p>
+
+                <p>
+                    <strong>
+                        60 XP
+                    </strong>
+                </p>
+
+                <button onclick="concluirCurso('Redes Sociais', 60)">
+
+                    Começar curso
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+
+        <h2>
+            Recompensas
+        </h2>
+
+
+        <div class="recompensas">
+
+
+            <div class="card">
+
+                <i class="fa-solid fa-certificate icon"></i>
+
+                <h3>
+                    Certificado
+                </h3>
+
+                <p>
+                    Complete um curso para
+                    desbloquear seu certificado.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <i class="fa-solid fa-gift icon"></i>
+
+                <h3>
+                    Vale-presente
+                </h3>
+
+                <p>
+                    Troque seus pontos por benefícios.
+                </p>
+
+                <button onclick="resgatar(300)">
+
+                    Resgatar - 300 pontos
+
+                </button>
+
+            </div>
+
+
+            <div class="card">
+
+                <i class="fa-solid fa-trophy icon"></i>
+
+                <h3>
+                    Conquista
+                </h3>
+
+                <p>
+                    Complete cursos e desbloqueie
+                    novas conquistas.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </main>
+
+
+    <script src="js/cursos.js"></script>
+
+</body>
+
+</html>

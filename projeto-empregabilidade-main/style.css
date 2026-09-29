@@ -1,0 +1,795 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    color: #222;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   CONTAINERS
+========================================= */
+
+.container,
+.dashboard,
+.perfil-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+
+/* =========================================
+   CARDS GERAIS
+========================================= */
+
+.card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   CARDS DA PÁGINA INICIAL
+========================================= */
+
+.container {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+.container .card {
+    width: 350px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   ÍCONES
+========================================= */
+
+.icon {
+    font-size: 40px;
+
+    color: #2563eb;
+
+    margin: 20px 0;
+}
+
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+button {
+    border: none;
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    margin-top: 15px;
+
+    transition:
+        background 0.2s,
+        transform 0.2s;
+}
+
+button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   ÁREA DOS CURSOS
+========================================= */
+
+.titulo-cursos {
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   GRID DOS CURSOS
+========================================= */
+
+.curso-grid {
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 25px auto 40px;
+
+    display: grid;
+
+    /*
+       3 cards por fileira
+       Cada card possui 280px
+    */
+
+    grid-template-columns:
+        repeat(3, 280px);
+
+    /*
+       Centraliza as 3 colunas
+       no meio da página
+    */
+
+    justify-content: center;
+
+    align-items: stretch;
+
+    gap: 25px;
+}
+
+
+/* =========================================
+   CARD INDIVIDUAL DO CURSO
+========================================= */
+
+.curso {
+
+    width: 280px;
+
+    min-height: 260px;
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+
+/* Efeito ao passar o mouse */
+
+.curso:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   ÍCONE DO CURSO
+========================================= */
+
+.curso .icon {
+
+    font-size: 32px;
+
+    color: #2563eb;
+
+    margin: 5px 0 15px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   TÍTULO DO CURSO
+========================================= */
+
+.curso h3 {
+
+    font-size: 19px;
+
+    margin-bottom: 10px;
+
+    color: #1e293b;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   DESCRIÇÃO DO CURSO
+========================================= */
+
+.curso p {
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #64748b;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   BOTÃO DO CURSO
+========================================= */
+
+.curso button {
+
+    width: 100%;
+
+    padding: 10px;
+
+    margin-top: auto;
+}
+
+
+/* =========================================
+   BARRA DE PROGRESSO
+========================================= */
+
+.barra {
+
+    width: 100%;
+
+    height: 10px;
+
+    background: #e5e7eb;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin: 10px 0;
+}
+
+.progresso {
+
+    height: 100%;
+
+    background: #22c55e;
+
+    border-radius: 20px;
+
+    transition: width 0.4s ease;
+}
+
+
+/* =========================================
+   CARD DE NÍVEL
+========================================= */
+
+.nivel-card {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    margin-bottom: 30px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.nivel-card h2 {
+
+    margin-bottom: 10px;
+}
+
+.nivel-card .barra {
+
+    margin: 15px 0;
+}
+
+
+/* =========================================
+   RECOMPENSAS
+========================================= */
+
+.recompensas {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin: 20px 0 40px;
+}
+
+
+/* =========================================
+   PERFIL
+========================================= */
+
+.perfil-card {
+
+    text-align: center;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   AVATAR
+========================================= */
+
+.avatar {
+
+    width: 100px;
+
+    height: 100px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 40px;
+}
+
+
+/* =========================================
+   CONQUISTAS
+========================================= */
+
+.conquistas {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+.conquistas span {
+
+    background: #eff6ff;
+
+    color: #1d4ed8;
+
+    padding: 10px 15px;
+
+    border-radius: 20px;
+}
+
+
+/* =========================================
+   NOTIFICAÇÕES
+========================================= */
+
+.notification {
+
+    background: white;
+
+    padding: 20px;
+
+    margin: 15px auto;
+
+    width: 80%;
+
+    border-left:
+        5px solid #2563eb;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================
+   FORMULÁRIO DE CADASTRO
+========================================= */
+
+.form-container {
+
+    width: 90%;
+
+    max-width: 500px;
+
+    margin: 40px auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-container h1 {
+
+    text-align: center;
+
+    margin-bottom: 15px;
+
+    color: #1e40af;
+}
+
+.form-container p {
+
+    text-align: center;
+
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+.form-container form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border:
+        1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.form-container textarea {
+
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+.form-container button {
+
+    width: 100%;
+
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   ÁREA DA EMPRESA
+========================================= */
+
+.jovens-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+    margin-top: 25px;
+}
+
+.jovens-grid .card {
+
+    margin-bottom: 0;
+}
+
+.jovens-grid ul {
+
+    margin-top: 10px;
+
+    margin-left: 20px;
+}
+
+.jovens-grid li {
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE - ATÉ 1000px
+========================================= */
+
+@media (max-width: 1000px) {
+
+    /*
+       Cursos passam para 2 colunas
+    */
+
+    .curso-grid {
+
+        grid-template-columns:
+            repeat(2, 280px);
+
+    }
+
+
+    /*
+       Recompensas passam para 2 colunas
+    */
+
+    .recompensas {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    /*
+       Jovens passam para 1 coluna
+    */
+
+    .jovens-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVIDADE - CELULAR
+========================================= */
+
+@media (max-width: 650px) {
+
+    /*
+       Container principal
+    */
+
+    .dashboard,
+    .perfil-container,
+    .container {
+
+        width: 94%;
+
+    }
+
+
+    /*
+       Cursos: 1 por fileira
+    */
+
+    .curso-grid {
+
+        grid-template-columns: 280px;
+
+        justify-content: center;
+
+        gap: 20px;
+
+    }
+
+
+    /*
+       Card do curso
+    */
+
+    .curso {
+
+        width: 280px;
+
+    }
+
+
+    /*
+       Recompensas: 1 por fileira
+    */
+
+    .recompensas {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /*
+       Cards da página inicial
+    */
+
+    .container {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 15px;
+
+    }
+
+    .container .card {
+
+        width: 100%;
+
+    }
+
+
+    /*
+       Header
+    */
+
+    header {
+
+        padding: 25px 15px;
+
+    }
+
+
+    /*
+       Menu
+    */
+
+    nav a {
+
+        display: inline-block;
+
+        margin: 5px;
+
+    }
+
+
+    /*
+       Formulário
+    */
+
+    .form-container {
+
+        width: 94%;
+
+        padding: 25px;
+
+    }
+
+
+    /*
+       Notificações
+    */
+
+    .notification {
+
+        width: 94%;
+
+    }
+
+}
+
+
+/* =========================================
+   CELULARES MUITO PEQUENOS
+========================================= */
+
+@media (max-width: 350px) {
+
+    .curso-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .curso {
+
+        width: 100%;
+
+    }
+
+}
